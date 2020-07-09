@@ -1,6 +1,7 @@
 import express from "express";
 import { PORT } from "../global/enviroments";
 import { router } from "../routes/index.routes";
+import cors from "cors";
 import DB from "./db";
 
 export default class Server {
@@ -22,6 +23,7 @@ export default class Server {
   }
 
   private config(): void {
+    this.app.use(cors({ origin: true }));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
   }

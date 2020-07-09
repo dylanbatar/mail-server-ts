@@ -9,7 +9,7 @@ export default class Emails {
       service: "Gmail",
       auth: {
         user: "email@gmail.com",
-        pass: "password",
+        pass: "contraseña",
       },
     });
   }
